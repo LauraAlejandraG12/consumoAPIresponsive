@@ -1,0 +1,135 @@
+/* CAST */
+#cast {
+  max-width: 1280px;
+  margin: 0 auto 5rem;
+  padding: 0 2.5rem;
+}
+
+.castContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.castCard {
+  background: #131920;
+  border: 1px solid rgba(123, 177, 199, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  width: 280px;
+}
+
+.castCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px #7BB1C7;
+}
+
+/*ACTOR*/
+
+.actorImage {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.castCard:hover .actorImage {
+  filter: grayscale(0%);
+}
+
+.actorInfo {
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.actorInfo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.actorInfo p,
+.actorCountry,
+.actorTimezone,
+.actorBirthday {
+  font-size: 0.76rem;
+  color: #7a8fa0;
+  margin-bottom: 0.25rem;
+}
+
+.actorBtn {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7BB1C7;
+  text-decoration: none;
+  border: 1px solid rgba(123, 177, 199, 0.18);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  transition: 0.2s, border-color 0.2s;
+}
+
+.actorBtn:hover {
+  background: rgba(123, 177, 199, 0.15);
+  border-color: #7BB1C7;
+}
+
+
+/*MEDIA QUERIES CAST*/
+
+@media (max-width: 1024px) {
+  .castContainer { 
+    flex-wrap: wrap;
+     justify-content: center;
+     }
+  .castCard { 
+    width: 220px; 
+  }
+  #cast { 
+    padding: 0 2rem;
+   }
+}
+
+@media (max-width: 768px) {
+  #cast { 
+    padding: 0 1.2rem;
+   }
+  .castContainer {
+     gap: 1rem; 
+    }
+  .castCard { 
+    width: 190px; 
+  }
+  .actorInfo h3 {
+     font-size: 0.85rem;
+     }
+}
+
+@media (max-width: 480px) {
+  .castContainer { 
+    display: grid;
+     grid-template-columns: repeat(2, 1fr); 
+     justify-items: center; 
+     padding-left: 40vh;
+    }
+  .castCard { 
+    width: 160%; 
+  }
+  .actorTimezone { 
+    display: none; 
+  }
+}
+
+@media (max-width: 360px) {
+  .castContainer { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.8rem; 
+  }
+}

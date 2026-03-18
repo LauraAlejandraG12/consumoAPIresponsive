@@ -1,0 +1,236 @@
+/* SHOW */
+.verShow {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.infor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.infor h3 {
+  display: none;
+}
+
+.imgShow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  filter: brightness(0.65);
+  transform: scale(1.1);
+  transform-origin: center 30%;
+}
+
+.infor::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #0d1117 25%,
+    rgba(13, 17, 23, 0.75) 50%,
+    rgba(13, 17, 23, 0.3) 100%
+  ),
+  linear-gradient(
+    to top,
+    #0d1117 0%,
+    transparent 50%
+  );
+}
+.infor1 {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2.5rem 3.5rem;
+}
+
+.show-year {
+  font-size: 0.8rem;
+  color: #7BB1C7;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.show-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(123, 177, 199, 0.18);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.78rem;
+  color: #7a8fa0;
+  font-weight: 500;
+}
+
+.pill span {
+  color: #7BB1C7;
+}
+
+.show-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #7BB1C7;
+  color: #0d1117;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  box-shadow: 0 6px 24px rgba(123, 177, 199, 0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 0.72rem 1.6rem;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(123, 177, 199, 0.25);
+  border-color: #7BB1C7;
+  color: #7BB1C7;
+}
+
+
+/*MEDIA QUERIES SHOW*/
+@media (max-width: 1024px) {
+  .verShow { 
+    min-height: 360px; 
+  }
+  .infor1 { 
+    padding: 2rem 2rem 3rem; 
+  }
+  .show-title { 
+    font-size: 2.8rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .verShow { 
+    min-height: 500px; 
+    align-items: flex-end;
+   }
+  .imgShow { 
+    transform: scale(1.15); 
+    object-position: center 20%; 
+  }
+  .infor::after {
+    background: linear-gradient(to bottom, transparent 0%, rgba(13,17,23,0.5) 30%, #0d1117 70%);
+  }
+  .infor1 { 
+    padding: 1.5rem 1.2rem 2.5rem; 
+  }
+  .show-title { 
+    font-size: 2rem; 
+  }
+  .show-year {
+     font-size: 0.72rem;
+     }
+  .meta-pills { 
+    gap: 0.4rem; 
+    margin-bottom: 1.2rem;
+   }
+  .pill { 
+    font-size: 0.72rem; 
+    padding: 0.25rem 0.7rem; 
+  }
+  .show-links { 
+    gap: 0.6rem;
+     margin-top: 1rem; 
+  }
+  .btn-primary { 
+    font-size: 0.78rem; 
+    padding: 0.65rem 1.4rem; 
+  }
+  .btn-secondary { 
+    font-size: 0.78rem; 
+    padding: 0.62rem 1.2rem;
+   }
+}
+
+@media (max-width: 480px) {
+  .verShow { 
+    min-height: 460px; 
+  }
+  .show-title { 
+    font-size: 1.7rem; 
+  }
+  .show-links { 
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  .btn-primary, .btn-secondary { 
+    width: 100%; 
+    justify-content: center; 
+  }
+}
+
+@media (max-width: 360px) {
+  .show-title { 
+    font-size: 1.4rem;
+   }
+  .pill {
+     font-size: 0.68rem; 
+     padding: 0.2rem 0.6rem; }
+}

@@ -1,0 +1,26 @@
+<section class="episodesList">
+
+  <img class="imgEpisode" [src]="episode.image.medium" alt="{{ episode.name }}">
+
+  <div class="episodeInfo">
+
+    <p class="episodeTitle">{{ episode.name }}</p>
+
+    <div class="episodeData">
+      <p>{{ 'duration' | transloco }}: {{ episode.runtime }} {{ 'minutes' | transloco }}</p>
+    </div>
+
+    <div class="episodeData">
+      <span>{{ 'date' | transloco }}: {{ episode.airdate }}</span>
+      <span>{{ 'time' | transloco }}: {{ episode.airtime }}</span>
+    </div>
+
+    <a class="episode-link" [href]="episode.url" target="_blank">
+      {{ 'view_episode' | transloco }} →
+    </a>
+
+    <p class="episodeSummary" [innerHTML]="episode.summary"></p>
+
+  </div>
+
+</section>

@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <span class="nav-logo">The Art of Spain</span>
+    <button (click)="cambiarIdioma()">
+      {{ 'change_language' | transloco }}
+    </button>
+  </nav>
+</header>
+
+<app-show [show]="show"></app-show>
+
+  <div class="video-section">
+  <div class="section-header">
+    <div class="section-line"></div>
+  </div>
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/kQ37bCkKhaw"
+      title="The Art of Spain - Trailer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<section id="episodes">
+  <div class="section-header">
+    <h2 class="section-label">{{ 'episodes' | transloco }}</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="episodesContainer">
+    <app-episode-list
+      *ngFor="let episode of episodes"
+      [episode]="episode">
+    </app-episode-list>
+  </div>
+</section>
+
+<section id="cast">
+  <div class="section-header">
+    <h2 class="section-label">{{ 'cast' | transloco }}</h2>
+    <div class="section-line"></div>
+  </div>
+  <app-cast [cast]="cast"></app-cast>
+</section>

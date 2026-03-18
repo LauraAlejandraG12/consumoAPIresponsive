@@ -1,0 +1,39 @@
+<section class="verShow" *ngIf="show">
+
+  <div class="infor">
+    <h3>{{ show.name }}</h3>
+    <img class="imgShow" [src]="show.image.original" alt="{{ show.name }}">
+  </div>
+
+  <div class="infor1">
+    <h2 class="show-title">{{ show.name }}</h2>
+
+    <div class="meta-pills">
+      <span class="pill">
+        {{ 'language' | transloco }}: <span>{{ ('languages.' + show.language) | transloco }}</span>
+      </span>
+      <span class="pill">
+        {{ 'type' | transloco }}: <span>{{ ('types.' + show.type) | transloco }}</span>
+      </span>
+      <span class="pill">
+        {{ 'duration' | transloco }}: <span>{{ show.runtime }} {{ 'minutes' | transloco }}</span>
+      </span>
+      <span class="pill" *ngFor="let genre of show.genres">
+        {{ ('genres.' + genre) | transloco }}
+      </span>
+    </div>
+
+    <div class="show-links">
+      <a class="btn-primary" [href]="show.url" target="_blank">
+        ▶ {{ 'view_show' | transloco }}
+      </a>
+      <a class="btn-secondary" href="https://www.tvmaze.com/shows/35352/art-of-spain/episodes" target="_blank">
+       {{'view_episodes' | transloco}}
+      </a>
+      <a class="btn-secondary" href="https://www.justwatch.com/us/tv-show/the-art-of-spain" target="_blank">
+        JustWatch
+      </a>
+    </div>
+  </div>
+
+</section>
