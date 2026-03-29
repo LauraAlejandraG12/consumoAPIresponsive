@@ -1,0 +1,53 @@
+{
+
+"language": "Idioma",
+  "type": "Tipo",
+  "genre": "Género",
+  "duration": "Duración",
+  "minutes": "minutos",
+
+  "date": "Fecha",
+  "time": "Hora",
+
+  "country": "País",
+  "timezone": "Zona horaria",
+  "birthday": "Cumpleaños",
+
+  "cast": "elenco",
+  "episodes": "episodios",
+  "view_show": "Ver en TvMaze",
+  "view_tvmaze": "Ver en TvMaze",
+  "view_justwatch": "ver en JustWatch",
+  "view_episodes": "TvMaze Episodios",
+  "view_episode": "Ver en TvMaze",
+  "view_profile": "Ver perfil",
+  "change_language": "Cambiar idioma",
+  "season": "Temporada",
+  "episode": "Episodio",
+  "no_connection": "Video no disponible. Sin conexión",
+  "no_internet": "Sin conexión a internet",
+  "please_internet": "Por favor revise su conexión",
+
+  "languages": {
+    "English": "Inglés"
+  },
+
+  "types": {
+    "Documentary": "Documental"
+  },
+
+  "genres": {
+    "History": "Historia"
+  },
+
+  "status": {
+    "Ended": "Finalizada",
+    "Running": "En emisión"
+  },
+
+  "countries": {
+    "United Kingdom": "Reino Unido"
+  }
+
+
+}

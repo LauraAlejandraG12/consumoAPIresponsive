@@ -1,0 +1,51 @@
+{
+"language": "Language",
+  "type": "Type",
+  "genre": "Genre",
+  "duration": "Duration",
+  "minutes": "minutes",
+
+  "date": "Date",
+  "time": "Time",
+
+  "country": "Country",
+  "timezone": "Time zone",
+  "birthday": "Birthday",
+
+  "cast": "cast",
+  "episodes": "episodes",
+  "view_show": "View in TvMaze",
+  "view_tvmaze": "View in TvMaze",
+  "view_justwatch": "View in JustWatch",
+  "view_episodes": "TvMaze Episodes",
+  "view_episode": "View in TvMaze",
+  "view_profile": "View profile",
+  "change_language": "Change language",
+  "season": "Season",
+  "episode": "Episode",
+  "no_connection": "Video unavailable. No connection.",
+  "no_internet": "No internet connection",
+  "please_internet": "Please check your connection",
+
+  "languages": {
+    "English": "English"
+  },
+
+  "types": {
+    "Documentary": "Documentary"
+  },
+
+  "genres": {
+    "History": "History"
+  },
+
+  "status": {
+    "Ended": "Ended",
+    "Running": "Running"
+  },
+
+  "countries": {
+    "United Kingdom": "United Kingdom"
+  }
+
+}

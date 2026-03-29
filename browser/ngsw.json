@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1774789655129,
+  "index": "/consumoAPIresponsive/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/consumoAPIresponsive/index.html",
+        "/consumoAPIresponsive/main-WNPMREEH.js",
+        "/consumoAPIresponsive/polyfills-FFHMD2TL.js",
+        "/consumoAPIresponsive/styles-F5GM3BU4.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/consumoAPIresponsive/assets/BanderaEspaña.jpg",
+        "/consumoAPIresponsive/assets/i18n/en.json",
+        "/consumoAPIresponsive/assets/i18n/es.json",
+        "/consumoAPIresponsive/assets/icons/launchericon-144x144.png",
+        "/consumoAPIresponsive/assets/icons/launchericon-192x192.png",
+        "/consumoAPIresponsive/assets/icons/launchericon-48x48.png",
+        "/consumoAPIresponsive/assets/icons/launchericon-512x512.png",
+        "/consumoAPIresponsive/assets/icons/launchericon-72x72.png",
+        "/consumoAPIresponsive/assets/icons/launchericon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "tvmaze-api",
+      "patterns": [
+        "https:\\/\\/api\\.tvmaze\\.com\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 86400000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/consumoAPIresponsive/assets/BanderaEspaña.jpg": "f81c26d02a69bd10a2b43a60b8efe074c94020fd",
+    "/consumoAPIresponsive/assets/i18n/en.json": "1cfc2f1563177aa69b2649676101eaa3892148ea",
+    "/consumoAPIresponsive/assets/i18n/es.json": "9b99520aa772484d90daf4308d048439c1174fc9",
+    "/consumoAPIresponsive/assets/icons/launchericon-144x144.png": "bf4829b6b542ecfaf726ed21886efbbe57d2c165",
+    "/consumoAPIresponsive/assets/icons/launchericon-192x192.png": "322c39a2c7d03dd26893ba0edcf59937be91209a",
+    "/consumoAPIresponsive/assets/icons/launchericon-48x48.png": "f6b99c45a622aa9c56ce109ac142dae0e9f3d47a",
+    "/consumoAPIresponsive/assets/icons/launchericon-512x512.png": "fc3d44394ef230a07ae74f066236598b01b36f26",
+    "/consumoAPIresponsive/assets/icons/launchericon-72x72.png": "3d892a0f8027780df7c2a2c7c82d8eb9732899da",
+    "/consumoAPIresponsive/assets/icons/launchericon-96x96.png": "237f52c3e86bda3cb5337c79645cb8a20c64a7e4",
+    "/consumoAPIresponsive/index.html": "7bef72ae1b38fb436c9266c7cb236b93f4226204",
+    "/consumoAPIresponsive/main-WNPMREEH.js": "b6dc721560857d2ad52c362d697397cc406f5f7c",
+    "/consumoAPIresponsive/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/consumoAPIresponsive/styles-F5GM3BU4.css": "0b028dd41601746e1215f3446a1367bfda865c61"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
