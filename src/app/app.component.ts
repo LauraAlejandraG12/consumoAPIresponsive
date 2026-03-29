@@ -112,6 +112,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
       this.isOffline = !navigator.onLine;
 
+      if(this.isOffline){
+        this.isModalOpen = true;
+      }
+
       window.addEventListener('offline', () => {
         this.isOffline = true;
         this.isModalOpen = true;
