@@ -8,7 +8,7 @@ export interface Cast {
     }
     birthday: Date;
     image: {
-        medium: string;
+        original: string;
     }
 }
 }

@@ -1,3 +1,59 @@
+
+.modalContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 2.0rem;
+  left: 80vh;
+  background-color:#0d1117 ;
+  width: 30%;
+  height: 20%;
+  z-index: 9999;
+  border-radius: 20px;
+  color: white;
+  border:1px solid #7BB1C7;
+}
+
+.modal{
+  display: flex;
+  width: 100%;
+}
+
+.info{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+}
+
+.info h3{
+  font-size: 20px;
+}
+
+.info p{
+  font-size: 13px;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-left: 40px;
+}
+
+.buttonContainer{
+  display: flex;
+  padding-bottom: 80px;
+  padding-right: 15px;
+}
+
+.buttonContainer .closeButton{
+  width: 5%;
+  border: none;
+  background: none;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
 /* NAV */
 header {
   position: sticky;
@@ -105,14 +161,8 @@ nav button:hover {
   position: absolute;
   inset: -2px;
   border-radius: 22px;
-  background: linear-gradient(
-    135deg,
-    #7BB1C7,
-    rgba(123, 177, 199, 0.1) 40%,
-    transparent 60%,
-    rgba(123, 177, 199, 0.15) 80%,
-    #7BB1C7
-  );
+  background: linear-gradient(135deg,#7BB1C7,rgba(123, 177, 199, 0.1) 40%, transparent 60%,
+    rgba(123, 177, 199, 0.15) 80%, #7BB1C7);
   z-index: -1;
 }
 
@@ -137,10 +187,89 @@ nav button:hover {
   border-radius: 20px;
 }
 
+.videoOffline{
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #000;
+  border-top:1px solid #7BB1C7;
+}
 
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  height: 50px;
+  padding: 40px 350px;
+  background: linear-gradient(to right, #2c3e50, #2a4246);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 100;
+}
+
+
+@media (max-width: 1024px) {
+  .modalContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .section-label { 
+    padding-left: 10vh; 
+  }
+  .section-label::after { 
+    margin-left: 10vh; 
+  }
+
+   .video-section { 
+    padding: 0 2rem; 
+  }
+
+   .footer {
+    padding: 40px 100px;
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 768px) {
-  header { 
+  
+    .modalContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: auto;
+    top: 1.2rem;
+    padding: 0.8rem 1rem;
+    border-radius: 16px;
+  }
+
+  .info {
+    padding-left: 30px;
+  }
+
+  .info h3 {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 11px;
+    padding-left: 20px;
+    padding-top: 6px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 40px;
+    padding-right: 10px;
+  }
+
+   header { 
     padding: 0 1.2rem; 
   }
   nav { 
@@ -153,18 +282,7 @@ nav button:hover {
     font-size: 0.7rem; 
     padding: 0.35rem 0.9rem; 
   }
-}
 
-@media (max-width: 1024px) {
-  .section-label { 
-    padding-left: 10vh; 
-  }
-  .section-label::after { 
-    margin-left: 10vh; 
-  }
-}
-
-@media (max-width: 768px) {
   .section-label { 
     font-size: 1.4rem; 
     padding-left: 1.2rem; 
@@ -172,27 +290,8 @@ nav button:hover {
   .section-label::after { 
     margin-left: 1.2rem;
    }
-}
 
-@media (max-width: 480px) {
-  .section-label { 
-    font-size: 1.2rem; 
-    padding-left: 1rem;
-   }
-  .section-label::after { 
-    margin-left: 1rem;
-   }
-}
-
-
-@media (max-width: 1024px) {
-  .video-section { 
-    padding: 0 2rem; 
-  }
-}
-
-@media (max-width: 768px) {
-  .video-section { 
+   .video-section { 
     padding: 0 1.2rem; 
     margin-bottom: 3rem; }
   .video-wrapper { 
@@ -201,13 +300,83 @@ nav button:hover {
   .video-wrapper iframe { 
     border-radius: 12px; 
   }
+
+  .videoOffline {
+    height: 250px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 30px 40px;
+    font-size: 11px;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
-  .video-wrapper {
+
+  .modalContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: auto;
+    top: 1rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 14px;
+  }
+
+  .info {
+    padding-left: 15px;
+  }
+
+  .info h3 {
+    font-size: 14px;
+  }
+
+  .info p {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 20px;
+    padding-right: 8px;
+  }
+
+  .buttonContainer .closeButton {
+    font-size: 16px;
+  }
+
+  .section-label { 
+    font-size: 1.2rem; 
+    padding-left: 1rem;
+   }
+  .section-label::after { 
+    margin-left: 1rem;
+   }
+
+    .video-wrapper {
      border-radius: 8px;
      }
   .video-wrapper iframe { 
     border-radius: 8px;
    }
+
+   .videoOffline {
+    height: 180px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+   .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 16px;
+    font-size: 10px;
+    text-align: center;
+  }
 }
+

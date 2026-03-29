@@ -1,26 +1,24 @@
 <section class="episodesList">
 
-  <img class="imgEpisode" [src]="episode.image.medium" alt="{{ episode.name }}">
+  <img class="imgEpisode" [src]="episode.image.original" alt="{{ episode.name }}">
 
   <div class="episodeInfo">
 
     <p class="episodeTitle">{{ episode.name }}</p>
 
     <div class="episodeData">
-      <p>{{ 'duration' | transloco }}: {{ episode.runtime }} {{ 'minutes' | transloco }}</p>
+      <span class="info"><span class="blueLetter">{{ 'duration' | transloco }}</span>: {{ episode.runtime }} {{ 'minutes' | transloco }}</span>
+      <span class="info"><span class="blueLetter">{{ 'date' | transloco }}</span>: {{ episode.airdate }}</span>
+      <span class="info"><span class="blueLetter">{{ 'time' | transloco }}</span>: {{ episode.airtime }}</span>
     </div>
 
-    <div class="episodeData">
-      <span>{{ 'date' | transloco }}: {{ episode.airdate }}</span>
-      <span>{{ 'time' | transloco }}: {{ episode.airtime }}</span>
-    </div>
+     <p class="episodeSummary" [innerHTML]="episode.summary"></p>
 
-    <a class="episode-link" [href]="episode.url" target="_blank">
-      {{ 'view_episode' | transloco }} →
+
+     <div class="button">
+    <a class="episodeButton" [href]="episode.url" target="_blank">
+      ▶ {{ 'view_episode' | transloco }}
     </a>
-
-    <p class="episodeSummary" [innerHTML]="episode.summary"></p>
-
+    </div>
   </div>
-
 </section>

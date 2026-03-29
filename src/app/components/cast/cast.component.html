@@ -1,23 +1,23 @@
 <section class="castContainer">
   <article class="castCard" *ngFor="let actor of cast">
 
-    <img class="actorImage" [src]="actor.person.image?.medium" alt="{{ actor.person.name }}">
+    <img class="actorImage" [src]="actor.person.image?.original" alt="{{ actor.person.name }}">
 
     <div class="actorInfo">
       <h3>{{ actor.person.name }}</h3>
 
       <p class="actorCountry">
-        {{ 'country' | transloco }}:
+       <span class="blueLetter">{{ 'country' | transloco }} </span> :
         {{ ('countries.' + actor.person.country?.name) | transloco }}
       </p>
 
       <p class="actorTimezone">
-        {{ 'timezone' | transloco }}:
+        <span class="blueLetter">{{ 'timezone' | transloco }} </span>:
         {{ actor.person.country?.timezone }}
       </p>
 
       <p class="actorBirthday">
-        {{ 'birthday' | transloco }}:
+       <span class="blueLetter">{{ 'birthday' | transloco }}</span> :
         {{ actor.person.birthday }}
       </p>
 

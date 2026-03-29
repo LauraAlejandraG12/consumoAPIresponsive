@@ -20,6 +20,8 @@ export class AppComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   private subscription2: Subscription;
   private subscription3: Subscription;
+  isOffline: boolean = false;
+  isModalOpen: boolean = false;
 
   constructor(private showService: ShowService, private translocoService: TranslocoService ) { }
 
@@ -88,7 +90,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 },
                 birthday: cast.person.birthday,
                 image: {
-                medium: cast.person.image.medium
+                original: cast.person.image.original
                 }
               }
             };
@@ -107,6 +109,22 @@ export class AppComponent implements OnInit, OnDestroy {
           console.log('Proceso completado')
         },
       });
+
+      this.isOffline = !navigator.onLine;
+
+      window.addEventListener('offline', () => {
+        this.isOffline = true;
+        this.isModalOpen = true;
+      });
+
+      window.addEventListener("online", () => {
+        this.isOffline = false;
+        this.isModalOpen = false;
+      })
+  }
+
+  onClose(){
+    this.isModalOpen = false;
   }
 
   ngOnDestroy(): void {

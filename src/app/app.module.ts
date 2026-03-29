@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,19 +8,26 @@ import { EpisodeListComponent } from './components/episode-list/episode-list.com
 import { ShowComponent } from './components/show/show.component';
 import { CastComponent } from './components/cast/cast.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
     AppComponent,
     EpisodeListComponent,
     ShowComponent,
-    CastComponent
+    CastComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

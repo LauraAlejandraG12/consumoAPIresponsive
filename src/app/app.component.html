@@ -1,3 +1,15 @@
+<div class="modalContainer" *ngIf = "isModalOpen">
+  <div class="modal">
+    <div class="info"> 
+      <h3>⚠️ {{ 'no_internet' | transloco}}</h3>
+       <p> {{'please_internet' | transloco}}</p>
+    </div>
+    </div>
+       <div class="buttonContainer">
+      <button class="closeButton" (click) = "onClose()">x</button>
+    </div>
+</div>
+
 <header>
   <nav>
     <span class="nav-logo">The Art of Spain</span>
@@ -13,7 +25,7 @@
   <div class="section-header">
     <div class="section-line"></div>
   </div>
-  <div class="video-wrapper">
+  <div class="video-wrapper" *ngIf = "!isOffline; else isOfflineVideo">
     <iframe
       src="https://www.youtube.com/embed/kQ37bCkKhaw"
       title="The Art of Spain - Trailer"
@@ -22,6 +34,12 @@
     </iframe>
   </div>
 </div>
+
+<ng-template #isOfflineVideo>
+  <div class="videoOffline">
+    <p>{{ 'no_connection' | transloco}}</p>
+  </div>
+</ng-template>
 
 <section id="episodes">
   <div class="section-header">
@@ -42,4 +60,11 @@
     <div class="section-line"></div>
   </div>
   <app-cast [cast]="cast"></app-cast>
+</section>
+
+
+<section class="footer">
+  <p>API TvMaze</p>
+  <p>Created by Laura Giraldo</p>
+  <p>&copy; 2026</p>
 </section>

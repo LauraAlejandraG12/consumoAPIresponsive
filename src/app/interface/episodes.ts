@@ -8,7 +8,7 @@ export interface Episodes {
     airtime: string;
     runtime: number;
     image: {
-        medium: string;
+        original: string;
     }
     summary: string;
 }

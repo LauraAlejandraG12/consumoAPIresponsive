@@ -23,7 +23,9 @@
   "change_language": "Change language",
   "season": "Season",
   "episode": "Episode",
-
+  "no_connection": "Video unavailable. No connection.",
+  "no_internet": "No internet connection",
+  "please_internet": "Please check your connection",
 
   "languages": {
     "English": "English"
@@ -45,4 +47,5 @@
   "countries": {
     "United Kingdom": "United Kingdom"
   }
+
 }

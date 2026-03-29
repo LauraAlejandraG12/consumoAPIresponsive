@@ -24,7 +24,9 @@
   "change_language": "Cambiar idioma",
   "season": "Temporada",
   "episode": "Episodio",
-
+  "no_connection": "Video no disponible. Sin conexión",
+  "no_internet": "Sin conexión a internet",
+  "please_internet": "Por favor revise su conexión",
 
   "languages": {
     "English": "Inglés"

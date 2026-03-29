@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "dataGroups": [
+    {
+      "name": "tvmaze-api", 
+      "urls": ["https://api.tvmaze.com/**"],
+      "cacheConfig": {
+        "maxSize": 20,
+        "maxAge": "1d",
+        "strategy": "freshness"
+
+      }
+    }
+  ]
+}
